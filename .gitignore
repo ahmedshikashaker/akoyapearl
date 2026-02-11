@@ -51,3 +51,4 @@ coverage
 *.pid
 *.seed
 *.pid.lock
+node_modules
