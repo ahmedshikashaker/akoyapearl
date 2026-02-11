@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 26 35 50;
+    --card: 255 255 255;
+    --card-foreground: 26 35 50;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+    --border: 226 232 240;
+    --accent: 212 168 67;
+    --accent-foreground: 26 35 50;
+  }
+
+  .dark {
+    --background: 10 15 26;
+    --foreground: 248 250 252;
+    --card: 15 23 42;
+    --card-foreground: 248 250 252;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+    --border: 51 65 85;
+    --accent: 212 168 67;
+    --accent-foreground: 26 35 50;
+  }
+
+  * {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white dark:bg-navy-950 text-slate-900 dark:text-slate-100 antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-gold-500/30 text-navy-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed;
+  }
+
+  .body-base {
+    @apply text-base text-slate-600 dark:text-slate-400 leading-relaxed;
+  }
+
+  .glass-card {
+    @apply bg-white/80 dark:bg-navy-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50;
+  }
+
+  .premium-shadow {
+    box-shadow: 
+      0 1px 3px 0 rgb(0 0 0 / 0.04),
+      0 4px 6px -1px rgb(0 0 0 / 0.04),
+      0 10px 15px -3px rgb(0 0 0 / 0.05),
+      0 20px 25px -5px rgb(0 0 0 / 0.03);
+  }
+
+  .premium-shadow-dark {
+    box-shadow: 
+      0 1px 3px 0 rgb(0 0 0 / 0.3),
+      0 4px 6px -1px rgb(0 0 0 / 0.2),
+      0 10px 15px -3px rgb(0 0 0 / 0.3),
+      0 20px 25px -5px rgb(0 0 0 / 0.2);
+  }
+
+  .gold-accent {
+    @apply text-gold-600 dark:text-gold-400;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(212, 168, 67, 0.15);
+  }
+
+  .bento-card {
+    @apply relative overflow-hidden rounded-2xl border border-slate-200/60 dark:border-slate-700/40 
+           bg-white dark:bg-navy-900/60 backdrop-blur-sm
+           transition-all duration-300 ease-out;
+  }
+
+  .bento-card:hover {
+    @apply border-gold-400/30 dark:border-gold-500/20;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(212, 168, 67, 0.1);
+  }
+
+  .dark .bento-card:hover {
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(212, 168, 67, 0.15);
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 dark:focus:ring-offset-navy-900;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-border {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #d4a843, #b8860b) border-box;
+    border: 2px solid transparent;
+  }
+
+  .dark .gradient-border {
+    background: linear-gradient(rgb(15 23 42), rgb(15 23 42)) padding-box,
+                linear-gradient(135deg, #d4a843, #b8860b) border-box;
+  }
+}
