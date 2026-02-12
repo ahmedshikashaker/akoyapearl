@@ -19,7 +19,7 @@ export function Footer() {
             >
               <div className="relative w-10 h-10">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Akoya Pearl Logo"
                   fill
                   className="object-contain rounded-lg"

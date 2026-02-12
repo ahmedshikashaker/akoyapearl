@@ -57,7 +57,7 @@ export function Header() {
           >
             <div className="relative w-10 h-10 md:w-12 md:h-12 group-hover:scale-105 transition-transform duration-200">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Akoya Pearl Logo"
                 fill
                 className="object-contain rounded-lg"

@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     description: 'Custom software development, dedicated teams, and IT consultancy for growing enterprises.',
     type: 'website',
     siteName: 'Akoya Pearl',
-    images: ['/logo.jpg'],
+    images: ['/logo.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Akoya Pearl | Enterprise Software Solutions',
     description: 'Custom software development, dedicated teams, and IT consultancy.',
-    images: ['/logo.jpg'],
+    images: ['/logo.png'],
   },
 }
 
