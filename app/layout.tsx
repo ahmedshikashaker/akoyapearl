@@ -10,19 +10,26 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://akoyapearl.com'),
   title: 'Akoya Pearl | Enterprise Software Solutions & IT Consultancy',
   description: 'Akoya Pearl delivers custom software development, dedicated engineering teams, and strategic IT consultancy for enterprises seeking reliable technology partners.',
-  keywords: ['software development', 'staff augmentation', 'IT consultancy', 'enterprise software', 'dedicated teams', 'digital transformation'],
+  keywords: ['software development', 'staff augmentation', 'IT consultancy', 'enterprise software', 'dedicated teams', 'digital transformation', 'AI solutions', 'data analytics'],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Akoya Pearl | Enterprise Software Solutions',
     description: 'Custom software development, dedicated teams, and IT consultancy for growing enterprises.',
     type: 'website',
     siteName: 'Akoya Pearl',
+    images: ['/logo.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Akoya Pearl | Enterprise Software Solutions',
     description: 'Custom software development, dedicated teams, and IT consultancy.',
+    images: ['/logo.jpg'],
   },
 }
 

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui'
 import { ThemeToggle } from '@/components/ThemeToggle'
@@ -51,15 +52,17 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a 
             href="#" 
-            className="group flex items-center gap-2"
+            className="group flex items-center gap-3"
             aria-label="Akoya Pearl - Home"
           >
-            <div className="relative">
-              <div className="w-8 h-8 rounded-lg bg-navy-900 dark:bg-gold-500 flex items-center justify-center 
-                              group-hover:scale-105 transition-transform duration-200">
-                <span className="text-white dark:text-navy-900 font-bold text-sm">A</span>
-              </div>
-              <div className="absolute -inset-1 bg-gold-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative w-10 h-10 md:w-12 md:h-12 group-hover:scale-105 transition-transform duration-200">
+              <Image
+                src="/logo.jpg"
+                alt="Akoya Pearl Logo"
+                fill
+                className="object-contain rounded-lg"
+                priority
+              />
             </div>
             <span className="text-xl md:text-2xl font-bold tracking-tight text-navy-900 dark:text-white">
               Akoya <span className="text-gold-600 dark:text-gold-400">Pearl</span>

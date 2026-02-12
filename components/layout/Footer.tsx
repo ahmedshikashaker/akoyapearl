@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { CONTACT_INFO, NAV_LINKS } from '@/data/constants'
 
 export function Footer() {
@@ -13,11 +14,16 @@ export function Footer() {
           <div className="lg:col-span-2">
             <a 
               href="#" 
-              className="inline-flex items-center gap-2 mb-4"
+              className="inline-flex items-center gap-3 mb-4"
               aria-label="Akoya Pearl - Home"
             >
-              <div className="w-8 h-8 rounded-lg bg-gold-500 flex items-center justify-center">
-                <span className="text-navy-900 font-bold text-sm">A</span>
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/logo.jpg"
+                  alt="Akoya Pearl Logo"
+                  fill
+                  className="object-contain rounded-lg"
+                />
               </div>
               <span className="text-2xl font-bold tracking-tight">
                 Akoya <span className="text-gold-400">Pearl</span>
